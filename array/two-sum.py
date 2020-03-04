@@ -18,7 +18,7 @@ Author: Xzreal
 '''
 
 class Solution:
-    def __init__(self,nums, target: int):
+    def __init__(self,nums, target: int) :
         self.nums=nums
         self.target=target
 
@@ -31,7 +31,7 @@ class Solution:
                 if self.target == (m + self.nums[j]):
                     return [i, j]
                 else:
-                    # print(i, j, m + _n, " didn't match!")
+                    # print(i, j, m                + _n, " didn't match!")
                     j += 1
         return "not exist"
 
@@ -40,7 +40,6 @@ class Solution:
         _dict = {}
         for i, m in enumerate(self.nums):
             _dict[m] = i
-
         for i, m in enumerate(self.nums):
             j = _dict.get(self.target - m)
             if j is not None and i != j:
