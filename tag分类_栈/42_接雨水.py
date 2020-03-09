@@ -78,6 +78,7 @@ class Stack(object):
     def isEmpty(self):
         return len(self.stack) == 0
 
+
 class Solution1:
     def trap(self, height):
         ans = 0
@@ -96,7 +97,7 @@ class Solution1:
         return ans
 
 
-aa = Solution1().trap([4,1,0,0,5,1,4])
+aa = Solution1().trap([0,4,0,0,5,1,4])
 print(aa)
 
 # ------------------------------------------------------------------------------------
