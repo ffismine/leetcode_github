@@ -34,6 +34,7 @@ class Solution:
         while head:
             # temp指向当前节点的下一个节点
             tmp = head.next
+
             # 然后将当前节点指向new_head
             head.next = new_head
             # 都前进一位
