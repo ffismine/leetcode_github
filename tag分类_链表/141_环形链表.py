@@ -22,7 +22,7 @@
 又会相遇，此时相遇点便是环起点
   
 法2_哈希
-
+还是一样，集合存地址
 '''
 
 
@@ -53,3 +53,14 @@ class Solution:
                 slow = slow.next
                 fast = fast.next
             return fast
+
+class Solution1:
+    def detectCycle(self, head: ListNode) -> ListNode:
+        a = set()
+        while head:
+            a.add(head)
+            if head.next in a:
+                return head.next
+            head = head.next
+        return
+
