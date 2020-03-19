@@ -41,7 +41,7 @@ class Solution:
 
         jump_index = 0
         max_jump = index[0]
-        # 只需要当前位置能够达到
+        # 只需要小于整体长度 并且 当前位置能够达到
         while jump_index < len_nums and jump_index <= max_jump:
             # 当前位置+跳数>最远位置，更新最远位置
             if index[jump_index] > max_jump:
