@@ -25,13 +25,7 @@
 较长链表长度减去较短链表长度，然后同时移动指针，指向同一节点即找到了交点
 方法3：太优美了，双指针，当自己链表遍历完了，让尾节点续上另一个链表的头。由于m+n = n+m 因此如果有相交最后会殊途同归。
 '''
-
-
-# Definition for singly-linked list.
-class ListNode:
-    def __init__(self, x):
-        self.val = x
-        self.next = None
+from tag_listnode import ListNode
 
 
 # set

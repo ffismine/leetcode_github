@@ -37,11 +37,7 @@ path_value等于sum，然后栈数据整体保存
 
 
 # Definition for a binary tree node.
-class TreeNode:
-    def __init__(self, x):
-        self.val = x
-        self.left = None
-        self.right = None
+from tag_tree import TreeNode
 
 
 class Solution:

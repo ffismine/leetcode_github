@@ -26,7 +26,7 @@ p、q 为不同节点且均存在于给定的二叉树中。
 
 '''
 '''
-from TreeNode import TreeNode
+from tag_tree import TreeNode
 # Definition for a binary tree node.
 
 
