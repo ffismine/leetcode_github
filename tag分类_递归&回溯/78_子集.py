@@ -38,15 +38,15 @@ class Solution:
             if i == len(nums):
                 return
             item.append(nums[i])
-            # 浅拷贝实现append
-            real = item.copy()
-            ans.append(real)
+            # 或者浅拷贝实现append
+            # real = item.copy()
+            # ans.append(real)
+            ans.append(item[:])
             helper(i + 1, item, ans)
             item.pop()
             helper(i + 1, item, ans)
 
-        real = item.copy()
-        ans.append(real)
+        ans.append(item[:])
         helper(0, item, ans)
         return ans
 
