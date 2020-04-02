@@ -1,24 +1,32 @@
 # -*- coding:utf-8 -*-
 # Author : Zhang Xie
-# Date : 2020/3/9 23:53
+# Date : 2020/4/3 2:41
 
 """
-中位数是有序列表中间的数。如果列表长度是偶数，中位数则是中间两个数的平均值。
-
+如何得到一个数据流中的中位数？
+如果从数据流中读出奇数个数值，那么中位数就是所有数值排序之后位于中间的数值。
+如果从数据流中读出偶数个数值，那么中位数就是所有数值排序之后中间两个数的平均值。
 例如，
 [2,3,4] 的中位数是 3
 [2,3] 的中位数是 (2 + 3) / 2 = 2.5
-设计一个支持以下两种操作的数据结构：
 
+设计一个支持以下两种操作的数据结构：
 void addNum(int num) - 从数据流中添加一个整数到数据结构中。
 double findMedian() - 返回目前所有元素的中位数。
 
-示例：
-addNum(1)
-addNum(2)
-findMedian() -> 1.5
-addNum(3)
-findMedian() -> 2
+示例 1：
+输入：
+["MedianFinder","addNum","addNum","findMedian","addNum","findMedian"]
+[[],[1],[2],[],[3],[]]
+输出：[null,null,null,1.50000,null,2.00000]
+
+示例 2：
+输入：
+["MedianFinder","addNum","findMedian","addNum","findMedian"]
+[[],[2],[],[3],[]]
+输出：[null,null,2.00000,null,2.50000]
+ 
+限制：最多会对 addNum、findMedia进行 50000 次调用。
 """
 '''
 思考：由于是中位数，所以自然而然想到堆
@@ -42,13 +50,19 @@ import heapq
 # nlargest(n, iter) 返回iter中n个最大的元素
 # nsmallest(n, iter) 返回iter中n个最小的元素
 # 默认为最小堆，如果需要使用最大堆，一般需要取相反数
+
+
 class MedianFinder:
+
     def __init__(self):
         """
         initialize your data structure here.
         """
         self.min_heap = []
         self.max_heap = []
+        heapq.heapify(self.min_heap)
+        heapq.heapify(self.max_heap)
+
     def addNum(self, num: int) -> None:
         if len(self.max_heap) == len(self.min_heap):
             if len(self.max_heap) == 0:
@@ -89,10 +103,7 @@ class MedianFinder:
 # param_2 = obj.findMedian()
 
 a = MedianFinder()
-a.addNum(40)
-a.addNum(12)
+a.addNum(1)
 print(a.findMedian())
 a.addNum(16)
 print(a.findMedian())
-
-
