@@ -21,7 +21,7 @@ minStack.min();   --> 返回 -2.
 
 '''
 思考：调用一个数据栈外的最小值栈，两个栈相当于状态一一对应的关系
-每次只需要比较栈顶，最小值栈顶记录最小值
+每次只需要比较栈顶，最小值栈顶记录数据栈的最小值
 
 例如：
 数据栈：   [-2, 0, -5, 4]
@@ -50,8 +50,8 @@ class MinStack:
 
     def pop(self) -> None:
         if len(self.dataStack) > 0:
-            self.dataStack.pop(-1)
-            self.minStack.pop(-1)
+            self.dataStack.pop()
+            self.minStack.pop()
 
     def top(self) -> int:
         if len(self.dataStack) > 0:
