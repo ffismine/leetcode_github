@@ -4,6 +4,7 @@
     <content url="file://$MODULE_DIR$">
       <sourceFolder url="file://$MODULE_DIR$/普通分类/tag分类_二叉树与图" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/普通分类/tag分类_链表" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/剑指offer/tag分类_剑指offer_树" isTestSource="false" />
     </content>
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />
