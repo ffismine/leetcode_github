@@ -85,7 +85,6 @@ class Solution1(object):
         return self.isSubTree(root_A.left, root_B.left) and self.isSubTree(root_A.right, root_B.right)
 
 
-
 # A = [3,4,5,1,2], B = [4,1]
 A = TreeNode(3)
 A.left = TreeNode(4)
