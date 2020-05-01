@@ -17,6 +17,7 @@
 
 #用栈解决
 
+
 a = [x for x in range(1,5)]
 aa = {x for x in range(1,5)}
 b = [1,2,1,2]
