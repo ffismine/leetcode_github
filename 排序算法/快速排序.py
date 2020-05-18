@@ -36,11 +36,11 @@ def partition(arr, left, right):
     pivot = left
     index = pivot+1
     i = index
-    while  i <= right:
+    while i <= right:
         if arr[i] < arr[pivot]:
             swap(arr, i, index)
-            index+=1
-        i+=1
+            index += 1
+        i += 1
     swap(arr,pivot,index-1)
     return index-1
 

@@ -11,7 +11,7 @@
 
 def mergeSort(arr):
     import math
-    if(len(arr)<2):
+    if len(arr)<2:
         return arr
     middle = math.floor(len(arr)/2)
     left, right = arr[0:middle], arr[middle:]
