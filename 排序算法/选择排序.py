@@ -21,3 +21,5 @@ def selectionSort(arr):
         if i != minIndex:
             arr[i], arr[minIndex] = arr[minIndex], arr[i]
     return arr
+
+

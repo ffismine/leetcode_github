@@ -20,3 +20,5 @@ def insertionSort(arr):
             preIndex -= 1
         arr[preIndex+1] = current
     return arr
+
+
