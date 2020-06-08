@@ -4,9 +4,9 @@
 
 为快速刷leetcode，将此项目分为两部分：
 
- 1.[官网tag分类](https://leetcode-cn.com/problemset/all/)给的多种tag，按照题解降序，选择性刷5-10题。
+ 1. [官网tag分类](https://leetcode-cn.com/problemset/all/) 给的多种tag，按照题解降序，选择性刷5-10题。
 
- 2.[官网剑指offer](https://leetcode-cn.com/problemset/lcof/)75题
+ 2. [官网剑指offer](https://leetcode-cn.com/problemset/lcof/) 75题
 
 ## 1  tag
 
