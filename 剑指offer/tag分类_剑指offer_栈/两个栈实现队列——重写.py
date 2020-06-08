@@ -1,5 +1,4 @@
 
-
 # 还行，没啥难度
 
 class CQueue:
