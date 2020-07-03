@@ -12,6 +12,7 @@ class Solution:
             color, node = stack.pop()
             if node is None: continue
             if color == WHITE:
+                # 核心，调换顺序即是三种遍历方式
                 stack.append((WHITE, node.right))
                 stack.append((GRAY, node))
                 stack.append((WHITE, node.left))
