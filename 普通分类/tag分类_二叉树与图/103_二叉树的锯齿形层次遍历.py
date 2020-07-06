@@ -22,11 +22,11 @@ from typing import List
 from tag_tree import TreeNode
 from tree_A import treeA
 
-
 '''
 当前层记录下层节点
 并且flag记录是否反向
 '''
+
 
 class Solution:
     def zigzagLevelOrder(self, root: TreeNode) -> List[List[int]]:
