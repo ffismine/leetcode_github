@@ -21,10 +21,8 @@
 创建一个k长度的最小堆。然后先放进去k个，然后大于于堆顶就替换
 '''
 
-
 import heapq
 # 在这里顺便复习python堆的用法
-
 # heappush(heap, x) 将x压入堆中
 # heappop(heap) 从堆中弹出最小的元素
 # heapify(heap) 让列表具备堆特征
@@ -47,4 +45,4 @@ class Solution:
         return H[0]
 
 
-print(Solution().findKthLargest([3,2,1,5,6,4], 2))
+print(Solution().findKthLargest([3, 2, 1, 5, 6, 4], 2))
