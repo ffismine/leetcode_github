@@ -21,7 +21,9 @@
 创建一个k长度的最小堆。然后先放进去k个，然后大于于堆顶就替换
 '''
 
-import heapq
+from heapq import *
+
+
 # 在这里顺便复习python堆的用法
 # heappush(heap, x) 将x压入堆中
 # heappop(heap) 从堆中弹出最小的元素
@@ -30,19 +32,28 @@ import heapq
 # nlargest(n, iter) 返回iter中n个最大的元素
 # nsmallest(n, iter) 返回iter中n个最小的元素
 
+# a = [5, 3, 4, 87, 1, 2]
+#
+# heapify(a)
+# # 1
+# print(a[0])
+#
+# heappop(a)
+# # 2
+# print(a[0])
+
 
 class Solution:
     def findKthLargest(self, nums, k: int):
         nums_len = len(nums)
         H = []
         for index in range(k):
-            heapq.heappush(H, nums[index])
+            heappush(H, nums[index])
 
         for index in range(k, nums_len):
             top = H[0]
             if nums[index] > top:
-                heapq.heapreplace(H, nums[index])
+                heapreplace(H, nums[index])
         return H[0]
 
-
-print(Solution().findKthLargest([3, 2, 1, 5, 6, 4], 2))
+# print(Solution().findKthLargest([3, 2, 1, 5, 6, 4], 2))
