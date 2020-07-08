@@ -21,8 +21,9 @@
 
 递归有一个技巧给思路：
 正确答案是112344，那么拆解子问题，最大的子问题的12344，这样拆解下去，思路就清晰了
-'''
 
+0708更新：新增一种便于理解的递归思路
+'''
 
 # Definition for singly-linked list.
 from tag_listnode import ListNode
@@ -55,13 +56,39 @@ class Solution1:
         if not l1: return l2
         if not l2: return l1
         if l1.val <= l2.val:
-            l1.next = self.mergeTwoLists(l1.next,l2)
+            l1.next = self.mergeTwoLists(l1.next, l2)
             return l1
         else:
-            l2.next = self.mergeTwoLists(l1,l2.next)
+            l2.next = self.mergeTwoLists(l1, l2.next)
             return l2
 
 
+class Solution2:
+
+    def __init__(self):
+        self.res = self.cur = ListNode(-1)
+
+    def mergeTwoLists2(self, l1: ListNode, l2: ListNode) -> ListNode:
+        if not l1:
+            while l2:
+                self.cur.next = ListNode(l2.val)
+                self.cur = self.cur.next
+                l2 = l2.next
+        if not l2:
+            while l1:
+                self.cur.next = ListNode(l1.val)
+                self.cur = self.cur.next
+                l1 = l1.next
+        if l1 and l2:
+            if l1.val <= l2.val:
+                self.cur.next = ListNode(l1.val)
+                self.cur = self.cur.next
+                self.mergeTwoLists2(l1.next, l2)
+            else:
+                self.cur.next = ListNode(l2.val)
+                self.cur = self.cur.next
+                self.mergeTwoLists2(l1, l2.next)
+        return self.res.next
 
 
 l1 = ListNode(1)
@@ -70,5 +97,12 @@ l1.next.next = ListNode(3)
 l2 = ListNode(1)
 l2.next = ListNode(3)
 l2.next.next = ListNode(4)
-
 Solution1().mergeTwoLists(l1, l2)
+
+l1 = ListNode(1)
+l1.next = ListNode(2)
+l1.next.next = ListNode(3)
+l2 = ListNode(1)
+l2.next = ListNode(3)
+l2.next.next = ListNode(4)
+print(Solution2().mergeTwoLists2(l1, l2))
