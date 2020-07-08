@@ -50,6 +50,7 @@ class Solution:
             for i in range(len(lists)):
                 if lists[i]:
                     heapq.heappush(min_heap, (lists[i].val, i))
+
             while min_heap:
                 val, index = heapq.heappop(min_heap)
                 cur.next = ListNode(val)
@@ -57,7 +58,8 @@ class Solution:
                 lists[index] = lists[index].next
                 if lists[index]:
                     heapq.heappush(min_heap, (lists[index].val, index))
-            return ans.next
+
+        return ans.next
 
 
 l1 = ListNode(1)
@@ -70,4 +72,4 @@ l3 = ListNode(4)
 l3.next = ListNode(6)
 l3.next.next = ListNode(7)
 
-Solution().mergeKLists([l1, l2, l3])
+print(Solution().mergeKLists([l1, l2, l3]))
