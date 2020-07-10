@@ -56,7 +56,8 @@ class Solution:
             pre_head = None
             for i in range(m - 1):
                 # 循环的最后一次记录下逆序前的头节点前驱,即点1
-                pre_head = head
+                if i == m - 2:
+                    pre_head = head
                 # 往后移动，找逆序前的头节点
                 head = head.next
             # 点2，记录逆置前的头节点
