@@ -11,6 +11,10 @@
 原因：342 + 465 = 807
 """
 
+# 思考：
+# 需要注意几个点：1,位数不相等 2,进位 3,最后还要进位
+
+
 # Definition for singly-linked list.
 # class ListNode:
 #     def __init__(self, x):
