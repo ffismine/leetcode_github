@@ -78,3 +78,20 @@ class Solution2:
         return ha
 
 
+c = ListNode(5)
+
+A = ListNode(2)
+A.next = ListNode(3)
+A.next.next = ListNode(4)
+A.next.next.next = c
+A.next.next.next.next = ListNode(7)
+
+B = ListNode(1)
+B.next = c
+B.next.next = ListNode(0)
+B.next.next.next = ListNode(9)
+
+
+print(Solution2().getIntersectionNode(A, B))
+
+
