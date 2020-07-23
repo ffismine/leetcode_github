@@ -29,15 +29,14 @@ class Solution(object):
         # 前序遍历第一个值为根节点
         root = TreeNode(preorder[0])
 
-        #查找当前子树的根节点在中序遍历的索引
+        # 查找当前子树的根节点在中序遍历的索引
         mid_index = inorder.index(preorder[0])
 
         # 递归，注意长度相等
-        root.left = self.buildTree(preorder[1:mid_index+1], inorder[:mid_index])
-        root.right = self.buildTree(preorder[mid_index+1:], inorder[mid_index+1:])
+        root.left = self.buildTree(preorder[1:mid_index + 1], inorder[:mid_index])
+        root.right = self.buildTree(preorder[mid_index + 1:], inorder[mid_index + 1:])
 
         return root
 
 
-
-Solution().buildTree(preorder = [3,9,20,15,7], inorder = [9,3,15,20,7])
+Solution().buildTree(preorder=[3, 9, 20, 15, 7], inorder=[9, 3, 15, 20, 7])
